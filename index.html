@@ -1,0 +1,168 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elshorbagy Portfolio</title>
+    <meta name="description" content="HTML & CSS single-page project for ITI MERN" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <a href="#home" class="logo">Elshorbagy</a>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation" />
+        <label for="menu-toggle" class="hamburger" aria-hidden="true">
+            <span></span><span></span><span></span>
+        </label>
+
+        <nav class="main-nav" aria-label="Main">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#birthday">Birthday</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#wishlist">Wishlist</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#thanks">Thanks</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 1- Welcome/Home -->
+    <section id="home" class="welcome section">
+        <h1>Hi, I'm Abdelhmeed Elshorbagy <span class="nickname">(Medo)</span></h1>
+        <p>Frontend enthusiast & MERN learner. Scroll to know more!</p>
+        <figure class="profile">
+            <img src="img/IMG_0242.jpeg" alt="Abdelhmeed Elshorbagy profile" loading="lazy" />
+        </figure>
+    </section>
+
+    <main class="container">
+        <!-- 2- Hobbies -->
+        <section id="hobbies" class="section" aria-labelledby="hobbies-title">
+            <h2 id="hobbies-title">Hobbies</h2>
+            <div class="hobby-grid">
+                <figure class="hobby-card">
+                    <img src="img/coding.jpg" alt="Coding" loading="lazy" />
+                    <figcaption>Coding</figcaption>
+                </figure>
+                <figure class="hobby-card">
+                    <img src="img/drive.jpg" alt="Drive" loading="lazy" />
+                    <figcaption>Drive</figcaption>
+                </figure>
+                <figure class="hobby-card">
+                    <img src="img/Video-game-tournament-1024x683.jpg" alt="Gaming" loading="lazy" />
+                    <figcaption>Gaming</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- 3- Birthday -->
+        <section id="birthday" class="section birthday-wrapper" aria-labelledby="birthday-title">
+            <h2 id="birthday-title">Birthday</h2>
+
+            <div class="birthday-view" aria-hidden="false">
+                <img src="img/Birthday-Cake-1.png.webp" alt="Birthday cake" loading="lazy" />
+                <p>My birthday is on <strong>March 3</strong>. 🎉</p>
+            </div>
+
+            <!-- After 5s this will fade in via CSS only -->
+            <form class="birthday-form" action="#thanks" method="GET" aria-hidden="true">
+                <label for="wish">Write a nice message for me 😊</label>
+                <textarea id="wish" name="wish" rows="4" required placeholder="Type your message here..."></textarea>
+                <button type="submit" class="btn primary">Send</button>
+            </form>
+        </section>
+
+        <!-- 4- Contact -->
+        <section id="contact" class="section" aria-labelledby="contact-title">
+            <h2 id="contact-title">Contact</h2>
+            <form action="https://formsubmit.co/abdelhmeed.mohsen@gmail.com" method="POST" class="contact-form">
+                <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_subject" value="New contact from your portfolio!" />
+
+                <div class="form-control">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your name" />
+                </div>
+                <div class="form-control">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email" />
+                </div>
+                <div class="form-control">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Enter your message"></textarea>
+                </div>
+                <div class="social">
+                    <div class="social">
+                        <a href="https://www.facebook.com/abdelhmeed32144/" target="_blank" rel="noopener"
+                            aria-label="facebook"><img src="img/icons8-facebook-100.png" alt="facebook"></a>
+                        <a href="https://instagram.com/abamedax" target="_blank" rel="noopener"
+                            aria-label="instagram"><img src="img/icons8-instagram-logo-94.png" alt="instagram"></a>
+                        <a href="https://github.com/abameda" target="_blank" rel="noopener" aria-label="github"><img
+                                src="img/icons8-github-logo-94.png" alt="github"></a>
+                        <a href="https://www.linkedin.com/in/abameda/" target="_blank" rel="noopener"
+                            aria-label="linkedin"><img src="img/icons8-linkedin-96.png" alt="linkedin"></a>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Submit</button>
+                    <button type="reset" class="btn">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- 5- Wishlist Slider (countries) -->
+        <section id="wishlist" class="section" aria-labelledby="wishlist-title">
+            <h2 id="wishlist-title">Countries I Wish to Visit</h2>
+
+            <div class="slider">
+                <!-- radios -->
+                <input type="radio" name="slide" id="s1" checked>
+                <input type="radio" name="slide" id="s2">
+
+                <!-- slides -->
+                <div class="slides">
+                    <div class="slide">
+                        <img src="img/ps.jpg" alt="Palestine" />
+                        <span class="caption">Palestine</span>
+                    </div>
+                    <div class="slide">
+                        <img src="img/swid.jpeg" alt="Switzerland" />
+                        <span class="caption">Switzerland</span>
+                    </div>
+                </div>
+
+                <!-- controls -->
+                <div class="controls">
+                    <label for="s1"></label>
+                    <label for="s2"></label>
+                </div>
+        </section>
+
+        <!-- 6- CV -->
+        <section id="cv" class="section" aria-labelledby="cv-title">
+            <h2 id="cv-title">Curriculum Vitae</h2>
+
+            <div class="cv-download">
+                <p>You can download my full CV here:</p>
+                <a href="Abdelhmeed Elshorbagy.pdf" class="btn primary" download>Download CV (PDF)</a>
+            </div>
+        </section>
+
+        <!-- 7- Thanks Page (redirect target) -->
+        <section id="thanks" class="section" aria-labelledby="thanks-title">
+            <h2 id="thanks-title">Thank You!</h2>
+            <p>Your message has been received. Have a great day! 🙌</p>
+            <a href="#home" class="btn">Back Home</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">&copy; 2025 Elshorbagy. All rights reserved.</footer>
+</body>
+
+</html>
