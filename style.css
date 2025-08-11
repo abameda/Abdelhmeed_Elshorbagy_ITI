@@ -1,0 +1,481 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background: #f5f6fa;
+    min-height: 100vh;
+    color: #232323;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: #fff;
+    border-bottom: 1.5px solid #e3e6ea;
+    box-shadow: 0 4px 18px #e0e0e031;
+    border-radius: 0 0 18px 18px;
+    padding: 18px 0 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1180px;
+    margin: auto;
+    padding: 0 22px;
+}
+
+.logo a {
+    font-weight: bold;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: #232323;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: #353535;
+    font-size: 1.06rem;
+    text-decoration: none;
+    transition: color 0.18s;
+    padding: 2px 8px;
+    border-radius: 8px;
+}
+
+.nav-links a:hover {
+    background: #ececec;
+    color: #1a59a2;
+}
+
+section,
+.Hobbies,
+.birthday-section,
+.cv-section,
+.contact-section {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.section-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 18px;
+    margin: 0 auto;
+}
+
+.Home,
+.Hobbies,
+.birthday-section,
+.cv-section,
+.contact-section {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+@media (max-width: 900px) {
+
+    .Home,
+    .Hobbies,
+    .birthday-section,
+    .cv-section,
+    .contact-section {
+        height: 100dvh !important;
+        min-height: 100dvh !important;
+        padding: 0 !important;
+    }
+}
+
+.Home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 55px;
+    padding: 60px 10vw 60px 10vw;
+    background: #fff;
+    color: #232323;
+    min-height: 500px;
+    border-radius: 14px;
+    box-shadow: 0 4px 32px #dedede1a;
+    scroll-margin-top: 90px;
+    margin-bottom: 70px;
+}
+
+.intro-text h1 {
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #222;
+}
+
+.intro-text span {
+    color: #888;
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+}
+
+.intro-text a {
+    color: #204d89;
+    text-decoration: underline dotted 1.5px #bccbe5;
+}
+
+.intro-text a:hover {
+    color: #111;
+}
+
+.brief {
+    font-size: 1.07rem;
+    color: #232323;
+    margin-top: 8px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.main_photo {
+    width: 270px;
+    border-radius: 18px;
+    object-fit: cover;
+    filter: grayscale(0.2) brightness(1);
+    transition: 0.28s;
+    box-shadow: 0 8px 40px 0 #bbb3;
+}
+
+.main_photo:hover {
+    box-shadow: 0 0 38px 2px #b8c3d8bb;
+    transform: scale(1.035) translateY(-5px);
+    filter: grayscale(0) brightness(1.09);
+}
+
+/* Hobbies Section */
+
+.Hobbies {
+    scroll-margin-top: 90px;
+
+}
+
+.Hobbies h2 {
+    color: #2e2e2e;
+    font-size: 2rem;
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-align: center;
+
+}
+
+.hobbies-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.image-card {
+    position: relative;
+    width: 270px;
+    height: 200px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f6f6f6;
+    box-shadow: 0 3px 22px #d5d8e00f;
+    transition: transform 0.25s cubic-bezier(.19, 1, .22, 1), box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    transition: filter 0.26s;
+}
+
+.caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(240, 240, 240, 0.93);
+    color: #23416a;
+    padding: 16px 10px 10px 10px;
+    text-align: center;
+    font-size: 1.07rem;
+    border-radius: 0 0 16px 16px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.28s;
+}
+
+.caption span {
+    color: #7d8692;
+    font-weight: 400;
+}
+
+.image-card:hover {
+    transform: scale(1.025) translateY(-2.5px);
+    box-shadow: 0 6px 38px #bccbe545;
+    z-index: 2;
+}
+
+.image-card:hover img {
+    filter: brightness(0.85) blur(1px);
+}
+
+.image-card:hover .caption {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Birthday Section */
+.birthday-section {
+    text-align: center;
+    padding: 60px 16px 50px 16px;
+    scroll-margin-top: 90px;
+    margin-top: 80px;
+}
+
+.birthday-special-section {
+    text-align: center;
+    margin: 0 auto;
+    padding: 36px 12px;
+    max-width: 380px;
+    background: #f7f7fb;
+    color: #232323;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px #d5d8e040;
+}
+
+.birthday-special-section h2 {
+    color: #232323;
+    font-size: 1.5rem;
+}
+
+.birthday-img {
+    width: 170px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px #ddd6;
+}
+
+.birthday-greeting {
+    font-size: 1.06rem;
+    color: #474a4e;
+    margin-bottom: 8px;
+    margin-top: 4px;
+}
+
+#birthday-msg {
+    width: 94%;
+    min-height: 50px;
+    border-radius: 7px;
+    border: 1px solid #d6d6d6;
+    padding: 10px;
+    font-size: 1rem;
+    background: #f4f6fb;
+    color: #232323;
+    margin-bottom: 12px;
+}
+
+#submit-birthday-msg {
+    padding: 8px 20px;
+    background: #204d89;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.01rem;
+    box-shadow: 0 2px 8px #e0e0e016;
+    transition: background 0.17s;
+}
+
+#submit-birthday-msg:hover {
+    background: #132b45;
+}
+
+.thank-you-message {
+    font-size: 1.09rem;
+    color: #22875e;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+/* CV Section */
+.cv-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-margin-top: 90px;
+    min-height: 300px;
+    margin-top: 55px;
+}
+
+.download-cv-btn {
+    background: #204d89;
+    color: #fff;
+    font-size: 1.4rem;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    box-shadow: 0 3px 18px #204d8922;
+    transition: transform 0.15s, box-shadow 0.18s, background 0.17s;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+}
+
+.download-cv-btn:hover {
+    background: #111f35;
+    box-shadow: 0 7px 24px #204d8930;
+    transform: scale(1.05) translateY(-3px);
+}
+
+/* Contact Section */
+.contact-section {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 34px 26px 24px 26px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px #bccbe511;
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    gap: 14px;
+}
+
+.contact-form h2 {
+    margin-bottom: 8px;
+    color: #204d89;
+    letter-spacing: 0.7px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1.5px solid #e3e6ea;
+    border-radius: 7px;
+    font-size: 1rem;
+    background: #f6f8fa;
+    color: #232323;
+    transition: border 0.16s, background 0.16s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1.5px solid #204d89;
+    background: #f1f4f9;
+}
+
+.contact-form button {
+    background: #204d89;
+    color: #fff;
+    font-size: 1.06rem;
+    padding: 10px 0;
+    border: none;
+    border-radius: 7px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.13s;
+    box-shadow: 0 2px 8px #204d8922;
+}
+
+.contact-form button:hover {
+    background: #111f35;
+    box-shadow: 0 5px 18px #204d8922;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+    .Home {
+        flex-direction: column;
+        gap: 28px;
+        padding: 30px 3vw;
+    }
+
+    .main_photo {
+        width: 98vw;
+        max-width: 330px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .Home,
+    .cv-section,
+    .birthday-section,
+    .contact-section {
+        padding: 10px 2vw 22px 2vw;
+    }
+
+    .intro-text h1,
+    .Hobbies h2 {
+        font-size: 1.25rem;
+    }
+
+    .main_photo {
+        width: 97vw;
+        min-width: 180px;
+        border-radius: 10px;
+    }
+
+    .image-card {
+        width: 97vw;
+        max-width: 320px;
+        height: 180px;
+    }
+}
+
+.site-footer {
+    text-align: center;
+    background: #fff;
+    border-top: 1.5px solid #e3e6ea;
+    box-shadow: 0 4px 18px #e0e0e031;
+    border-radius: 0 0 18px 18px;
+    padding: 18px 0 12px 0;
+
+}

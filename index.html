@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Page 1 -->
+
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#Home">Elshorbagy</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Hobbies">Hobbies</a></li>
+                <li><a href="#Birthday">Birthday</a></li>
+                <li><a href="#CV">CV</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="Home" class="Home">
+        <div class="intro-text">
+            <h1>Hi, I'm Abdelhmeed Elshorbagy (Medo) </h1>
+            <span> IT Manager @ <a href="https://www.amwagtravel.com/" target="_blank">Amwag Travel</a></span>
+            <p class="brief">
+                Passionate IT Manager with 5+ years of experience in travel technology and digital transformation. I
+                love building scalable solutions and helping teams grow!
+            </p>
+
+
+
+        </div>
+        <img class="main_photo" src="img/abdelhmeed.jpeg" alt="Abdelhmeed photo">
+    </div>
+    <!-- End Page 1 -->
+
+
+    <!-- page 2 -->
+    <div id="Hobbies" class="Hobbies">
+        <div>
+            <h2>Hobbies</h2>
+        </div>
+        <div class="hobbies-gallery">
+            <div class="image-card">
+                <img src="img/coding.jpg" alt="Coding" />
+                <div class="caption">
+                    Coding<br>
+                    <span>Building apps, solving problems and drinking coffee ☕</span>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="img/drive.jpg" alt="Driving" />
+                <div class="caption">
+                    Driving<br>
+                    <span>Freedom, speed and long roadtrips 🚗</span>
+                </div>
+            </div>
+            <div class="image-card">
+                <img src="img/gaming.jpg" alt="Gaming" />
+                <div class="caption">
+                    Gaming<br>
+                    <span>Competitive FPS and late night battles 🎮</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- End Page 2 -->
+
+
+
+    <!-- page 3 -->
+    <div id="Birthday" class="birthday-section">
+        <h2>Birthday</h2>
+        <!-- Birthday Content -->
+        <div id="birthday-special" class="birthday-special-section">
+            <div id="birthday-step1">
+                <h2>My BirthDay On March 3! 🎂</h2>
+                <img src="img/cake.png.webp" alt="Birthday Cake" class="birthday-img">
+                <div class="birthday-greeting">this was best day for this big world they are too lucky 😎!</div>
+            </div>
+            <form id="birthday-step2" class="hidden">
+                <h2>Leave me a kind message 😊</h2>
+                <textarea id="birthday-msg" rows="3" required placeholder="اكتب رسالة أو تهنئة ..."></textarea>
+                <br>
+                <button id="submit-birthday-msg" type="submit">Submit</button>
+            </form>
+            <div id="birthday-step3" class="hidden">
+                <h2>Thank You! 🙏</h2>
+                <div class="thank-you-message">Your message was sent. You made my day! 💚</div>
+            </div>
+        </div>
+
+        <!-- Thank You Message -->
+        <div id="thankYouMessage" class="hidden birthday-thanks">
+            <h3>Thank you for your message! 🎉</h3>
+        </div>
+
+    </div>
+
+
+    </div>
+
+
+    <div class="cv-section" id="CV">
+        <a href="Abdelhmeed Elshorbagy.pdf" download class="download-cv-btn">
+            Download My CV
+        </a>
+    </div>
+
+    <div class="contact-section" id="Contact">
+        <form action="https://formsubmit.co/abdelhmeed.mohsen@gmail.com" method="POST" class="contact-form">
+            <h2>Contact Me</h2>
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="Type your message here..." required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <footer class="site-footer">
+        © 2025 Elshorbagy. All rights reserved.
+    </footer>
+    <script>
+
+        setTimeout(function () {
+            document.getElementById("birthday-step1").classList.add("hidden");
+            document.getElementById("birthday-step2").classList.remove("hidden");
+            document.getElementById("birthday-msg").focus();
+        }, 5000);
+
+
+        document.getElementById("birthday-step2").onsubmit = function (e) {
+            e.preventDefault();
+            document.getElementById("birthday-step2").classList.add("hidden");
+            document.getElementById("birthday-step3").classList.remove("hidden");
+
+        };
+    </script>
+
+
+
+
+</body>
+
+</html>
